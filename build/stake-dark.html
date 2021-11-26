@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>MuseLab</title>
+</head>
+<body class="dark overflow-x-hidden">
+    <!-- dark/light wrapper -->
+    <div class="bg-gray dark:bg-dark">
+        <!-- navbar -->
+        <div class="max-w-1218px ml-auto mr-auto px-5 pt-4 sm:pt-14">
+            <div class="flex flex-row flex-wrap md:flex-nowrap items-center">
+                <div class="flex-grow flex-shrink">
+                    <img src="image/muse-logo.png" alt="logo">
+                </div>
+
+                <div class="block md:hidden flex-grow-0 flex-shrink relative">
+                    <button id="btnHamburger">
+                        <img class="block dark:hidden" src="image/icon/hamburger-black.svg" alt="hamburger menu">
+                        <img class="hidden dark:block" src="image/icon/hamburger-white.svg" alt="hamburger menu">
+                    </button>
+                </div>
+
+                <div class="flex-grow md:flex-grow-0 flex-shrink relative w-full md:w-auto">
+                    <ul id="navbarMenu" class="nav-menu-nonactive items-center duration-300 ease-in-out z-50 mt-4 md:mt-0 p-5 md:p-0 rounded-lg flex flex-col md:flex-row flex-nowrap absolute md:relative left-0 right-0 bg-light md:bg-transparent shadow-primary md:shadow-none">
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">How does it work?</a>
+                        </li>
+
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Our projects</a>
+                        </li>
+
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">FAQ</a>
+                        </li>
+
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Socials</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <button class="bg-green py-3 px-5 font-medium text-white dark:text-heading-black text-sm rounded-lg">
+                                Connect to wallet
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end navbar -->
+
+        <!-- stacking header -->
+        <div class="max-w-1120px mx-auto px-5 text-center text-24px font-semibold leading-tight mt-85px sm:mt-125px mb-12 sm:mb-60px">
+            <h3 class="text-heading-black dark:text-white">sMUSE Token Staking</h3>
+        </div>
+        <!-- end stacking header -->
+
+        <!-- stacking -->
+        <div class="flex flex-col md:flex-row flex-nowrap md:items-stretch max-w-1120px mx-auto px-5">
+            <div class="flex-grow-0 flex-shrink max-w-full md:max-w-693px w-full pt-8 md:pr-5 md:pt-20 order-last md:order-first">
+                <!-- block -->
+                <div class="rounded-3xl bg-white dark:bg-19112E px-4 py-6 sm:p-11 md:mt-0 md:h-full">
+                    <h5 class=" text-lg sm:text-22px font-semibold text-heading-black dark:text-white mb-5 sm:mb-30px">Stake</h5>
+
+                    <div>
+                        <!-- input -->
+                        <div class="bg-gray dark:bg-21173c rounded-2xl py-6 px-4 sm:px-10 flex flex-row flex-nowrap items-center relative">
+                            <div class="flex-grow-0 flex-shrink flex flex-nowrap flex-row items-center">
+                                <img src="./image/muse-exhange-icon.png" class="w-38px" id="input1Image">
+
+                                <h5 class="text-base text-body-black ml-3" id="input1Title">MUSE</h5>
+                            </div>
+
+                            <input id="input1Exchange" type="number" class="input-number-stake text-center absolute top-2/4 left-3/4 sm:left-2/4 transform -translate-x-3/4 sm:-translate-x-2/4 -translate-y-2/4" value="0.0">
+                        </div>
+
+                        <!-- button exchange input -->
+                        <div class="my-4 text-center">
+                            <button class="pr-3" id="buttonChangeInput">
+                                <img src="./image/change-icon.png" />
+                            </button>
+                        </div>
+
+                        <!-- input -->
+                        <div class="bg-white dark:bg-21173c rounded-2xl dark:py-6 px-4 sm:px-10 flex flex-row flex-nowrap items-center relative">
+                            <div class="flex-grow-0 flex-shrink flex flex-nowrap flex-row items-center">
+                                <img src="./image/smuse-exhange-icon.png" class="w-38px" id="input2Image">
+
+                                <h5 class="text-base text-body-black ml-3" id="input2Title">sMUSE</h5>
+                            </div>
+
+                            <input id="input2Exchange" type="number" class="input-number-stake text-center absolute top-2/4 left-3/4 sm:left-2/4 transform -translate-x-3/4 sm:-translate-x-2/4 -translate-y-2/4" value="0.0">
+                        </div>
+                    </div>
+
+                    <div class="mt-8 sm:mt-70px max-w-483px mx-auto">
+                        <p class="text-center text-sm sm:text-base leading-1-4 text-body-black">
+                            Make MUSE work for you! Stake your MUSE and gain sMUSE. No impermanent loss, no loss of governance rights. Continuously compounding. After each new deposit, all staked MUSE are subject to a 10 day lock-up period!
+                        </p>
+
+                        <p class="text-center text-sm sm:text-base leading-1-4 text-body-black mt-5">
+                            sMUSE automatically earns fees from the diferent protocol earnings.
+                        </p>
+                    </div>
+
+                    <div class="text-center sm:text-right mt-10 sm:mt-16">
+                        <button class="bg-green py-4 px-10 text-lg font-medium text-white dark:text-heading-black rounded-xl">
+                            Nothing to do
+                        </button>
+                    </div>
+                </div>
+                <!-- end block -->
+            </div>
+
+            <div class="flex-grow-0 flex-shrink md:max-w-407px w-full">
+                <!-- block -->
+                <div class="rounded-xl bg-white dark:bg-19112E py-2 px-5 sm:px-11 flex flex-row flex-nowrap">
+                    <div class="flex-grow-0 flex-shrink">
+                        <img src="./image/monkey-logo.png" class="w-7 sm:w-35px">
+                    </div>
+
+                    <div class="flex-grow-0 flex-shrink flex flex-row flex-nowrap items-center pl-4 sm:pl-7">
+                        <div class="flex-grow-0 flex-shrink">
+                            <img src="./image/smuse-icon.png" class="w-4 sm:w-19px">
+                        </div>
+                        <h5 class="text-body-black font-medium text-sm md:text-base pl-2">1 sMUSE =</h5>
+                    </div>
+
+                    <div class="flex-grow-0 flex-shrink flex flex-row flex-nowrap items-center pl-2">
+                        <div class="flex-grow-0 flex-shrink">
+                            <img src="./image/muse-icon.png" class="w-5 sm:w-19px block dark:hidden">
+                            <img src="./image/muse-icon-dark.png" class="w-5 sm:w-19px hidden dark:block">
+                        </div>
+                        <h5 class="text-body-black font-medium text-sm md:text-base pl-2">1.19056 MUSE</h5>
+                    </div>
+                </div>
+                <!-- end block -->
+
+                <!-- block -->
+                <div class="rounded-3xl bg-white dark:bg-19112E px-4 py-6 sm:p-11 mt-8">
+                    <h5 class="text-lg sm:text-22px font-semibold text-heading-black dark:text-white mb-4 sm:mb-5">Staking parameters</h5>
+
+                    <div class="flex flex-row flex-nowrap items-center">
+                        <div class="flex-grow-0 flex-shrink">
+                            <img src="./image/smuse-exhange-icon-55px.png" class="w-55px" />
+                        </div>
+
+                        <div class="flex-grow flex-shrink pl-3">
+                            <h5 class="text-body-black font-medium leading-1-5">1 sMUSE = $0.017607</h5>
+                        </div>
+                    </div>
+
+                    <h5 class="text-lg sm:text-22px font-semibold text-heading-black dark:text-white mb-4 sm:mb-5 mt-6 sm:mt-9">Balance</h5>
+
+                    <div class="flex flex-row flex-nowrap items-center pb-6 border-b border-gray-200">
+                        <div class="flex-grow-0 flex-shrink">
+                            <img src="./image/muse-exhange-icon-55px.png" class="w-55px" />
+                        </div>
+
+                        <div class="flex-grow flex-shrink pl-3">
+                            <h5 class="text-body-black font-medium leading-1-5">MUSE</h5>
+                        </div>
+
+                        <div class="flex-grow-0 flex-shrink">
+                            <h5 class="text-body-black font-medium leading-1-5">0.0000</h5>
+                        </div>
+                    </div>
+
+                    <h5 class="text-lg sm:text-22px font-semibold text-heading-black dark:text-white mb-4 sm:mb-5 mt-6 sm:mt-9">Staked</h5>
+
+                    <div class="flex flex-row flex-nowrap items-center">
+                        <div class="flex-grow-0 flex-shrink">
+                            <img src="./image/smuse-exhange-icon-55px.png" class="w-55px" />
+                        </div>
+
+                        <div class="flex-grow flex-shrink pl-3">
+                            <h5 class="text-body-black font-medium leading-1-5">MUSE</h5>
+                        </div>
+
+                        <div class="flex-grow-0 flex-shrink">
+                            <h5 class="text-body-black font-medium leading-1-5">0.0000</h5>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row flex-nowrap items-center bg-gray dark:bg-21173c rounded-xl py-2 sm:py-3 px-3 sm:px-5 mt-6 sm:mt-12">
+                        <div class="flex-grow flex-shrink pl-3">
+                            <h5 class="text-body-black leading-1-5 text-xs sm:text-sm">Approximate staking APR</h5>
+                        </div>
+
+                        <div class="flex-grow-0 flex-shrink">
+                            <h5 class="text-body-black font-medium leading-1-5 text-xs sm:text-sm">22.4562%</h5>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row flex-nowrap items-center bg-gray dark:bg-21173c rounded-xl py-2 sm:py-3 px-3 sm:px-5 mt-3">
+                        <div class="flex-grow flex-shrink pl-3">
+                            <h5 class="text-body-black leading-1-5 text-xs sm:text-sm">To withdraw:</h5>
+                        </div>
+
+                        <div class="flex-grow-0 flex-shrink">
+                            <ul class="flex flex-row flex-nowrap">
+                                <li class="flex-grow-0 flex-shrink">
+                                    <span class="block text-center text-lg font-semibold text-body-black" id="countDays">00</span>
+                                    <span class="block text-center text-xs text-body-black">days</span>
+                                </li>
+                                <li class="flex-grow-0 flex-shrink px-2">
+                                    <span class="block text-center text-lg font-semibold text-body-black">:</span>
+                                </li>
+                                <li class="flex-grow-0 flex-shrink">
+                                    <span class="block text-center text-lg font-semibold text-body-black" id="countHours">00</span>
+                                    <span class="block text-center text-xs text-body-black">hours</span>
+                                </li>
+                                <li class="flex-grow-0 flex-shrink px-2">
+                                    <span class="block text-center text-lg font-semibold text-body-black">:</span>
+                                </li>
+                                <li class="flex-grow-0 flex-shrink">
+                                    <span class="block text-center text-lg font-semibold text-body-black" id="countMins">00</span>
+                                    <span class="block text-center text-xs text-body-black">mins</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center sm:text-right mt-3" id="unstakeWrapId" style="display: none;">
+                        <button class="bg-green py-3 px-5 font-medium text-white dark:text-heading-black text-sm rounded-lg">
+                            Unstake MUSE
+                        </button>
+                    </div>
+                </div>
+                <!-- end block -->
+            </div>
+        </div>
+        <!-- end stacking -->
+
+        <!-- footer -->
+        <div class="max-w-1120px mx-auto px-5 mt-85px sm:mt-170px flex flex-row flex-nowrap justify-center sm:justify-end pb-6">
+            <a href="#" class="flex flex-row flex-nowrap text-body-black dark:text-white text-base sm:text-lg font-semibold items-center">
+                <span class="flex-grow flex-shrink pr-6">Join the community</span>
+                <span class="flex-grow-0 flex-shrink">
+                    <img src="./image/discord-gray-circle.png" class="w-60px">
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <script src="./custom.js"></script>
+</body>
+</html>
