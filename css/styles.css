@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-body;
+    }
+}
+
+@layer components {
+    .nav-item {
+        @apply mr-0 md:mr-8 mb-4 md:mb-0;
+    }
+
+    .nav-item:last-child {
+        @apply mr-0 mb-0;
+    }
+
+    .nav-link {
+        @apply text-heading-black md:dark:text-white;
+        @apply text-base;
+        font-weight: 500;
+    }
+
+    .nav-menu-active {
+        @apply opacity-100 visible md:opacity-100 md:visible;
+    }
+
+    .nav-menu-nonactive {
+        @apply opacity-0 invisible md:opacity-100 md:visible;
+    }
+
+    .button-primary {
+        @apply font-medium text-lg rounded-md py-4 px-5 inline-block;
+        @apply bg-black dark:bg-green text-white dark:text-heading-black;
+    }
+
+    .home-hero-blur {
+        @apply h-44 w-44;
+        filter: blur(130px);
+        -webkit-filter: blur(130px);
+        background-color: #7D69FF;
+    }
+
+    .work-blur {
+        @apply h-44 w-44;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        background-color: #7D69FF;
+    }
+
+    .accordion-heading .accordion-icon {
+        @apply w-35px sm:w-44px;
+        transform: rotate(0deg);
+        transition: transform .8s;
+    }
+
+    .accordion-heading.accordion-active .accordion-icon {
+        transform: rotate(45deg);
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height .8s;
+        -moz-transition: max-height .8s;
+        -ms-transition: max-height .8s;
+        -o-transition: max-height .8s;
+        transition: max-height .8s;
+    }
+
+    .accordion-heading.accordion-active ~ .accordion-content {
+        max-height: 400px;
+    }
+
+    .input-number-stake {
+        padding: 0;
+        background: none;
+        border: none;
+
+        @apply focus:outline-none text-body-black text-19px font-medium;
+    }
+}
